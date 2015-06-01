@@ -1,0 +1,45 @@
+﻿@model Organization
+@{
+    ViewBag.Title = "GitHub Repos";
+}
+<style>
+    .project-item {
+        list-style-type: none;
+        border-top: 1px solid #CCC;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .projects {
+        margin-top: 15px;
+        padding-left: 0;
+    }
+</style>
+<div class="row">
+    <h1 class="col-sm-12">@ViewBag.Title</h1>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <img src="@Model.AvatarUrl" class="img-responsive" />
+    </div>
+    <div class="col-sm-10">
+        <h2>@Model.Name</h2>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <ul class="projects">
+            @foreach (var project in Model.Projects)
+            {
+                <li class="project-item">
+                    <h3>
+                        <a href="@project.Url">@project.Name</a> <small>(@project.Stars Stars)</small>
+                    </h3>
+                    <p>@project.Description</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

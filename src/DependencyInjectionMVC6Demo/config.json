@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "DependencyInjectionMVC6Demo"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-DependencyInjectionMVC6Demo-4b7a8f0f-1ad1-43d6-acd5-89427b8b0312;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
